@@ -1,0 +1,21 @@
+# .NET build
+bin/
+obj/
+*.dll
+*.exe
+
+# Node
+node_modules/
+build/
+dist/
+
+# IDE / system files
+*.user
+*.suo
+.vscode/
+*.vs/
+.DS_Store
+Thumbs.db
+
+# Environment
+.env

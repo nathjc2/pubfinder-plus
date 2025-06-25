@@ -1,0 +1,6 @@
+@PubFinder.API_HostAddress = http://localhost:5156
+
+GET {{PubFinder.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
