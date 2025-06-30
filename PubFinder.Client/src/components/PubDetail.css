@@ -1,0 +1,62 @@
+/* PubDetail.css */
+
+.container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fff; /* white card background */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* subtle shadow */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+h3 {
+    margin-top: 2rem;
+    color: #34495e;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #2c3e50;
+}
+
+    ul li {
+        margin-bottom: 0.5rem;
+    }
+
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1.2rem;
+    background-color: #2980b9;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .back-button:hover {
+        background-color: #1c5980;
+    }
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
