@@ -1,22 +1,35 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './NavBar.css';
 
-function NavBar() {
+function NavBar({ user, onLogout }) {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        onLogout();
+        navigate('/');
+    };
+
     return (
-        <header className="navbar">
-            <div className="navbar-container">
-                <div className="navbar-logo">
-                    <Link to="/">PubFinder</Link>
-                </div>
-                <nav>
-                    <ul className="navbar-menu">
-                        <li><Link to="/">Home</Link></li>
-                        {/* Future links can go here */}
-                    </ul>
-                </nav>
+        <nav className="navbar">
+            <NavLink to="/" className="nav-logo">
+                PubFinder
+            </NavLink>
+            <div className="nav-links">
+                {user ? (
+                    <>
+                        <span className="welcome-text">Welcome, {user.username}</span>
+                        <button onClick={handleLogout} className="btn logout-btn">
+                            Logout
+                        </button>
+                    </>
+                ) : (
+                    <NavLink to="/login" className="btn login-link" activeclassname="active-link">
+                        Login
+                    </NavLink>
+                )}
             </div>
-        </header>
+        </nav>
     );
 }
 

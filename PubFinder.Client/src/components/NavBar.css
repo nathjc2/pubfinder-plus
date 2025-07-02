@@ -1,42 +1,66 @@
 .navbar {
-    background-color: #1B2B3A; /* deep navy */
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar-container {
-    max-width: 1140px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #2f5d36; 
+    padding: 1rem 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navbar-logo a {
-    color: #F6A800; /* warm gold */
-    font-weight: 700;
+.nav-logo {
+    color: #f0f6f1; /* off-white for contrast */
     font-size: 1.5rem;
+    font-weight: 700;
     text-decoration: none;
 }
 
-.navbar-menu {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-}
-
-    .navbar-menu li a {
-        color: #f9f9f9;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.25s ease;
+    .nav-logo:hover {
+        text-decoration: underline;
     }
 
-        .navbar-menu li a:hover {
-            color: #F6A800;
-        }
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.welcome-text {
+    color: #cbd7c0; /* lighter greenish-grey for subtlety */
+    font-weight: 600;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+/* Logout button in a rich red (for warning/danger) */
+.logout-btn {
+    background-color: #b83a3a; /* a bit muted red to match green */
+}
+
+    .logout-btn:hover {
+        background-color: #8c2e2e;
+    }
+
+
+.login-link {
+    background-color: #4caf50; /* medium green */
+}
+
+    .login-link:hover,
+    .active-link {
+        background-color: #3a8a36; /* darker green hover */
+        text-decoration: none;
+        color: white;
+    }

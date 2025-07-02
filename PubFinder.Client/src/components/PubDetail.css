@@ -1,34 +1,40 @@
-/* PubDetail.css */
-
 .container {
     max-width: 600px;
     margin: 3rem auto;
     padding: 2rem;
-    background-color: #fff; /* white card background */
+    background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* subtle shadow */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--color-text-dark);
+    display: flex;
+    flex-direction: column;
 }
 
 h2 {
-    margin-bottom: 0.5rem;
-    color: #2c3e50;
+    margin-bottom: 1rem;
+    color: var(--color-text-dark);
+    font-weight: 700;
+    font-size: 2rem;
 }
 
 p {
     font-size: 1.1rem;
-    color: #555;
+    color: var(--color-text-medium);
+    margin-bottom: 1rem;
 }
 
 h3 {
     margin-top: 2rem;
-    color: #34495e;
+    color: var(--color-text-medium);
+    font-weight: 600;
+    font-size: 1.25rem;
 }
 
 ul {
     list-style-type: disc;
     padding-left: 1.5rem;
-    color: #2c3e50;
+    color: var(--color-text-dark);
 }
 
     ul li {
@@ -39,18 +45,19 @@ ul {
 .back-button {
     display: inline-block;
     margin-top: 2rem;
-    padding: 0.5rem 1.2rem;
-    background-color: #2980b9;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--color-primary);
     color: white;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    align-self: flex-start;
 }
 
     .back-button:hover {
-        background-color: #1c5980;
+        background-color: var(--color-primary-dark);
     }
 
 /* Responsive */
@@ -58,5 +65,9 @@ ul {
     .container {
         margin: 1rem;
         padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
     }
 }
